@@ -1,0 +1,32 @@
+package com.ukejee.drivescoretest.creditScore.data.models
+
+data class CreditScoreInfo(
+    val changeInLongTermDebt: Int? = null,
+    val changeInShortTermDebt: Int? = null,
+    val changedScore: Int? = null,
+    val clientRef: String? = null,
+    val currentLongTermCreditLimit: Int? = null,
+    val currentLongTermCreditUtilisation: Any? = null,
+    val currentLongTermDebt: Int? = null,
+    val currentLongTermNonPromotionalDebt: Int? = null,
+    val currentShortTermCreditLimit: Int? = null,
+    val currentShortTermCreditUtilisation: Int? = null,
+    val currentShortTermDebt: Int? = null,
+    val currentShortTermNonPromotionalDebt: Int? = null,
+    val daysUntilNextReport: Int? = null,
+    val equifaxScoreBand: Int? = null,
+    val equifaxScoreBandDescription: String? = null,
+    val hasEverBeenDelinquent: Boolean = false,
+    val hasEverDefaulted: Boolean = false,
+    val maxScoreValue: Int? = null,
+    val minScoreValue: Int? = null,
+    val monthsSinceLastDefaulted: Int? = null,
+    val monthsSinceLastDelinquent: Int? = null,
+    val numNegativeScoreFactors: Int? = null,
+    val numPositiveScoreFactors: Int? = null,
+    val percentageCreditUsed: Int? = null,
+    val percentageCreditUsedDirectionFlag: Int? = null,
+    val score: Int? = null,
+    val scoreBand: Int? = null,
+    val status: String? = null
+)

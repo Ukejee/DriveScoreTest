@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DriveScoreTest</string>
+    <string name="credit_score_intro_text">Your credit score is</string>
+    <string name="max_term_text">out of %1d</string>
+</resources>
