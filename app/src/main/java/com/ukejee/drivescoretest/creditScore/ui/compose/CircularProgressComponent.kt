@@ -1,6 +1,7 @@
 package com.ukejee.drivescoretest.creditScore.ui.compose
 
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,7 +16,6 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -35,7 +35,7 @@ fun CircularProgressComponent(
     circleSize: Dp = 300.dp,
     strokeWidth: Dp = 1.dp,
     progressStrokeWidth: Dp = 2.dp,
-    margin: Dp = 6.dp,
+    margin: Dp = 9.dp,
     progressColor1: Color = Color.Green,
     progressColor3: Color = Color.Red,
     progressColor2: Color = progressColor1
@@ -46,11 +46,12 @@ fun CircularProgressComponent(
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             val sweepAngle = (progress / maxProgress) * 360f
-            val outerRadius = (size.maxDimension / 2)
-            val margin = margin.toPx()
-            val arcDiameter = (outerRadius * 2) - (margin * 2)
+            val marginPx = margin.toPx()
             val strokeWidthPx = strokeWidth.toPx()
             val progressStrokeWidthPx = progressStrokeWidth.toPx()
+
+            val progressSize = circleSize.toPx() - marginPx - progressStrokeWidthPx
+            val progressOffset = (marginPx + progressStrokeWidthPx) / 2
 
             // Outer black circle
             drawArc(
@@ -76,12 +77,16 @@ fun CircularProgressComponent(
                 startAngle = -90f,
                 sweepAngle = sweepAngle,
                 useCenter = false,
-                topLeft = Offset(margin, margin),
-                size = Size(arcDiameter, arcDiameter),
+                topLeft = Offset(progressOffset, progressOffset),
+                size = Size(progressSize, progressSize),
                 style = Stroke(width = progressStrokeWidthPx, cap = StrokeCap.Round)
             )
         }
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        Column(
+            modifier = Modifier.fillMaxSize(),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Text(
                 text = line1,
                 fontSize = 11.sp,
@@ -109,7 +114,7 @@ fun CircularProgressComponent(
 @Composable
 fun CircularProgressComponentPreview() {
     CircularProgressComponent(
-        progress = 200f,
+        progress = 500f,
         maxProgress = 500f,
         line1 = "Your credit score is",
         line2 = "200",
