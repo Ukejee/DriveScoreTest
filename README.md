@@ -2,7 +2,7 @@
 
 This is an Android application that displays a user's credit score in a circular progress bar.
 
-![DriveScoreTest Screenshot](./screenshots/credit_score_screenshot.png)
+<img src="./screenshots/credit_score_screenshot.png" alt="DriveScoreTest Screenshot" height="500" width="270"/>
 
 ## Project Structure
 
@@ -28,3 +28,10 @@ The project is a single-module Android application with the code organized by fe
 - **Retrofit for API Calls**: The application uses retrofit to make API calls. 
 - **Mockk**: The application makes use of Mockk to make mocks in it's unit tests.
 - **Repository Pattern**: The application uses the repository pattern to abstract the data source. This makes it easy to switch between different data sources, such as a remote API and a local database.
+
+## Recommendation for Further Improvements
+
+If I had more time to work on this application here are some more areas I'd have liked to work on:
+
+- I'd have handling the theming properly for light and dark mode.
+- I'd have made the application more accessible by following the accessibility guidelines.
