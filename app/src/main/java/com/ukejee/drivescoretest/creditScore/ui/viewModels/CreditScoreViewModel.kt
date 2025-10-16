@@ -15,7 +15,7 @@ class CreditScoreViewModel(
     private val repository: CreditScoreRepositoryContract
 ) : ViewModel() {
 
-    private val _uiState = MutableStateFlow(CreditScoreUiState())
+    private val _uiState = MutableStateFlow(CreditScoreUiState(isLoading = true))
     val uiState = _uiState.asStateFlow()
 
     fun getCreditScoreInformation() {

@@ -16,6 +16,10 @@ The project is a single-module Android application with the code organized by fe
         - `ui`: This package contains the UI layer for the credit score feature.
             - `compose`: This package contains the Jetpack Compose UI components for the credit score feature.
             - `viewmodel`: This package contains the ViewModel for the credit score feature.
+    - `application`: This package contains the application-level code.
+    - `ui.theme`: This package contains the UI theme for the application.
+    - `MainActivity`: This class contains the main activity for the application.
+    - `AppNavigation`: This class contains the navigation for the application.`
 - `app/src/test`: This directory contains unit tests for the application.
 - `app/src/debug`: This directory contains resources for the debug build, including a mock JSON response for the credit score API.
 

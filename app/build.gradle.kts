@@ -71,9 +71,6 @@ dependencies {
     testImplementation(libs.mockwebserver)
     androidTestImplementation(libs.mockwebserver)
 
-    //androidTestImplementation(libs.mockk.android)
-
-
     // For testing Flow
     testImplementation(libs.turbine)
     androidTestImplementation(libs.androidx.junit)
