@@ -39,3 +39,4 @@ If I had more time to work on this application here are some more areas I'd have
 
 - I'd have handling the theming properly for light and dark mode.
 - I'd have made the application more accessible by following the accessibility guidelines.
+- I'd add some retry logic to the API calls.
